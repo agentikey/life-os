@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Python runtime / virtualenv
+memory/.venv/
+**/__pycache__/
+*.pyc
+
+# Embedder runtime artifacts
+memory/embedder/embd.sock
+memory/embedder/daemon.log
+
+# Memory stores are personal/per-instance data — never ship them in the framework.
+# Each instance runs `memory/mem init` to create its own. Exclude binary DBs and
+# the generated human-readable export everywhere (root and per-client).
+*.db
+*.db-wal
+*.db-shm
+memory/exports/
+
+# Local, machine-specific Claude Code settings (permissions etc.)
+.claude/settings.local.json
+
+# Legacy / superseded
+Life OS/

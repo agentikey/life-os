@@ -1,0 +1,5 @@
+#!/bin/sh
+# Wrapper so `memory/mem ...` always runs under the LifeOS venv (which has
+# sqlite-vec + fastembed). Use this instead of `python3 memory/mem.py`.
+DIR="$(cd "$(dirname "$0")" && pwd)"
+exec "$DIR/.venv/bin/python" "$DIR/mem.py" "$@"

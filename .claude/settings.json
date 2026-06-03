@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth *)",
+      "Bash(git ls-remote *)",
+      "Bash(echo \"exit: $?\")"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/osoto/LifeOS/memory/.venv/bin/python /Users/osoto/LifeOS/memory/hooks/startup.py"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/osoto/LifeOS/memory/.venv/bin/python /Users/osoto/LifeOS/memory/hooks/recall.py"
+          }
+        ]
+      }
+    ]
+  }
+}

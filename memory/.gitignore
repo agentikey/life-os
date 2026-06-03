@@ -1,0 +1,9 @@
+# Local runtime — not for version control
+.venv/
+__pycache__/
+embedder/embd.sock
+embedder/daemon.log
+
+# The DB is binary; the human-readable mirror in exports/ is the version-friendly
+# record. Uncomment the next line if you'd rather not track the binary store.
+# lifeos.db
